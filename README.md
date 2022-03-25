@@ -2,5 +2,5 @@
 Admin Binar Car Rental
 
 Login :
-admin@gmail.com
-admin1
+username: admin@gmail.com
+password: admin1
