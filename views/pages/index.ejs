@@ -1,0 +1,69 @@
+<div class="page-content">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><%- title %></li>
+    </ol>
+  </nav>
+  <h1 class="page-title mb-4"><%- title %></h1>
+</div>
+<div class="table-wrapper" id="table-wrapper-1">
+  <h4 class="table-title mb-3">List Order</h4>
+  <table id="dataTable-1" class="table dataTable" style="width: 100%">
+    <thead>
+      <tr>
+        <th width="5%">No</th>
+        <th>User Email</th>
+        <th>Car</th>
+        <th>Start Rent</th>
+        <th>Finish Rent</th>
+        <th>Price</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% dataTable1.forEach(function(order, index){ %>
+      <tr>
+        <td><%=order.no%></td>
+        <td><%=order.userEmail%></td>
+        <td><%=order.car%></td>
+        <td><%=order.startRent%></td>
+        <td><%=order.finishRent%></td>
+        <td><%=order.price%></td>
+        <td><%=order.status%></td>
+      </tr>
+      <%})%>
+    </tbody>
+  </table>
+</div>
+<div class="table-wrapper" id="table-wrapper-2">
+  <h4 class="table-title mb-3">List Car</h4>
+  <table id="dataTable-2" class="table dataTable" style="width: 100%">
+    <thead>
+      <tr>
+        <th width="5%">No</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Start Rent</th>
+        <th>Finish Rent</th>
+        <th>Created at</th>
+        <th>Updated at</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% dataTable2.forEach(function(order, index){ %>
+      <tr>
+        <td><%- index+1 %></td>
+        <td><%=order.nama%></td>
+        <td><%=order.category%></td>
+        <td><%=order.price%></td>
+        <td><%=order.startRent%></td>
+        <td><%=order.finishRent%></td>
+        <td><%=order.CreatedAt%></td>
+        <td><%=order.updatedAt%></td>
+      </tr>
+      <%})%>
+    </tbody>
+  </table>
+</div>
